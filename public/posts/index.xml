@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Blog</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 17 Oct 2024 16:05:29 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Em Breve</title>
+      <link>http://localhost:1313/posts/em-breve/</link>
+      <pubDate>Thu, 17 Oct 2024 16:05:29 -0300</pubDate>
+      <guid>http://localhost:1313/posts/em-breve/</guid>
+      <description>&lt;p&gt;Blog da &lt;a href=&#34;https://makercenter.com.br&#34;&gt;Maker Center&lt;/a&gt; 🚀&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

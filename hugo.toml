@@ -1,0 +1,13 @@
+baseURL = 'https://blog.makercenter.com.br'
+languageCode = 'pt-BR'
+title = 'Blog'
+theme = 'mc-hugo-theme'
+
+defaultContentLanguage = 'pt-BR'
+[languages]
+  [languages.pt-BR]
+    disabled = false
+    languageCode = 'pt-BR'
+    languageDirection = 'ltr'
+    languageName = 'Português'
+    weight = 0
