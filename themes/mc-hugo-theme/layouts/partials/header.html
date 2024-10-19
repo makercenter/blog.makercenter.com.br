@@ -1,2 +1,71 @@
-<h1>{{ site.Title }}</h1>
-<!-- {{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->
+<!-- <h1>{{ site.Title }}</h1>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->
+
+<header>
+  <div class="top-bar">
+    <span>Bem-vindo a Maker Center</span>
+  </div>
+  <div class="container">
+    <div class="nav-header">
+      <div class="logo">
+        <!-- {{ with resources.Get "img/logo_icon.png" }}
+          {{ .RelPermalink }}
+        {{ end }} -->
+        {{ $logo := resources.Get "img/logo_icon.png" }}
+        <a href="https://www.makercenter.com.br/"><img src="{{ $logo.RelPermalink }}" width="64" height="64" alt="Logo"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="https://www.makercenter.com.br/nossos-produtos">Loja Maker</a></li>
+          <li><a href="https://blog.makercenter.com.br">Blog</a></li>
+          <li><a href="https://www.makercenter.com.br/p/cursos">Cursos</a></li>
+          <li><a href="https://www.makercenter.com.br/p/sobre">Sobre</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <form class="nav-search-form" id="search-form" novalidate="">
+          <input type="text" class="nav-search-input" placeholder="Buscar..." id="search-input" 
+          required="" autocomplete="off">
+
+          <a class="icon-search" id="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path fill-rule="nonzero"
+                d="M15.774 16.835a8.247 8.247 0 1 1 1.06-1.06L22.062 21 21 22.06l-5.226-5.225zm-5.277.409a6.747 6.747 0 1 0 0-13.494 6.747 6.747 0 0 0 0 13.494z">
+              </path>
+            </svg>
+          </a>
+        </form>
+        <a class="icon-mail" href="https://www.makercenter.com.br/p/contato">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill-rule="nonzero"
+              d="M21.75 7.067V6.75H2.25v.317l8.634 4.932a2.25 2.25 0 0 0 2.232 0l8.634-4.932zm0 1.727l-7.89 4.507a3.75 3.75 0 0 1-3.72 0L2.25 8.794v8.456h19.5V8.794zM.75 5.25h22.5v13.5H.75V5.25z">
+            </path>
+          </svg>
+        </a>
+        <a class="icon-cart" href="https://www.makercenter.com.br/gz/cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill-rule="nonzero"
+              d="M9.005 21a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18 21a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6.21 6.75l1.874 7.5h10.778l1.252-7.5H6.211zm-.374-1.5h16.05l-1.754 10.5H6.912l-2.997-12H.75v-1.5h4.337l.749 3z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('search-button').addEventListener('click', function() {
+    var element = document.getElementById('search-input');
+    
+    element.style.visibility = 'visible';
+  });
+
+  document.getElementById('search-form').addEventListener('submit', function (event) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    var search_query = document.getElementById('search-input').value;
+    window.location.href = "https://www.makercenter.com.br/" + search_query;
+  });
+</script>
